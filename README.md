@@ -28,8 +28,8 @@ pkg install nodejs
 pkg install ffmpeg
 pkg install imagemagick
 pkg install yarn
-git clone https://github.com/Axel-bytu/Asuna
-cd Asuna
+git clone https://github.com/kevinsit0/Bot-Zero-two
+cd Bot-Zero-two
 yarn
 npm i -g typescript
 tsc -p ./node_modules/@adiwajshing/baileys
