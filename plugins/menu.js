@@ -21,7 +21,7 @@ const defaultMenu = {
 ╰════════════════⊷❍➣
 
 *Instagram*:
-\`\`\`https://instagram.com/axelcagua\`\`\`
+\`\`\`https://instagram.com/kevinsito.593\`\`\`
 
 %readmore`.trimStart(),
   header: '╭════〘 *%category* 〙═⊷❍➣\n┃✧',
@@ -30,7 +30,7 @@ const defaultMenu = {
   after: ``,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command, __dirname }) => {
- conn.fakeReply(m.chat,  '*ESPERA⏳...*', '0@s.whatsapp.net', '*💫Asuna🔥*') 
+ conn.fakeReply(m.chat,  '*ESPERA⏳...*', '0@s.whatsapp.net', '*Zero two🔥*') 
   let tags
   let teks = `${args[0]}`.toLowerCase()
   let arrayMenu = ['all', 'game', 'xp', 'stiker', 'anime', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'islamic', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
