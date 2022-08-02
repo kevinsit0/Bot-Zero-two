@@ -1,19 +1,25 @@
-import fs from 'fs'
-function handler(m, { conn }) {
-let text = `
-*𝘾𝙤𝙣𝙩𝙖𝙘𝙩𝙤* 
-*Wa.me/593962681710 (CREADOR)*
-*https://instagram.com/asunabot*
-`.trim()   
-conn.reply(m.chat, text, m, {
-contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, 
-title: '𝘼𝙨𝙪𝙣𝙖𝘽𝙤𝙩 | 𝘼𝙨𝙪𝙣𝙖 𝙔 𝙆𝙞𝙧𝙞𝙩𝙤',
-body: '𝐂𝐫𝐞𝐚𝐝𝐨𝐫𝐚 | 𝐂𝐫𝐞𝐚𝐭𝐨𝐫',         
-previewType: 0, thumbnail: fs.readFileSync("./media/Asuna.jpg"),
-sourceUrl: `https://wa.me/593962681710`}}})
-  
+import PhoneNumber from 'awesome-phonenumber'
+let handler = async(m, { conn }) => {
+    let nomor = owner[0][0]
+    let number = nomor + '@s.whatsapp.net'
+    let biz = await conn.getBusinessProfile(number)
+
+    let vcard = `
+BEGIN:VCARD
+VERSION:3.0
+N:;kevin;;;
+FN:kevin
+TEL;type=CELL;type=VOICE;waid=${nomor}:${PhoneNumber('+' + nomor).getNumber('international')}
+X-WA-BIZ-NAME:kevin
+X-WA-BIZ-DESCRIPTION:${biz.description.replace(/\n/g, '\\n')}
+END:VCARD
+    `.trim()
+    let kont = await conn.sendMessage(m.chat, { contacts: { displayName: 'kevin', contacts: [{vcard}]}}, { quoted: m})
+    conn.reply(m.chat, kont)
 }
 handler.help = ['owner', 'creator']
 handler.tags = ['info']
-handler.command = /^(contacto|owner|creator|propietario|dueño|dueña|propietaria|dueño|creadora|creador)$/i
+
+handler.command = /^(owner|creator)$/i
+
 export default handler
