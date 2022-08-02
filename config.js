@@ -35,7 +35,7 @@ global.author = 'kevin'
 
 // Haruno global
 global.image = 'https://telegra.ph/file/0eb764fc1b4fd2bc2b968.jpg'
-global.watermark = '© Haruno'
+global.watermark = '© Zero Two'
 global.wait = '「 ⏱️ 」Espere por favor...'
 global.multiplier = 59 // Cuanto más alto, más difícil subir de nivel
 global.source = 'https://youtu.be/pgCNibhSYsY'
