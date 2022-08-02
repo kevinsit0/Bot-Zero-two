@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 let handler = async(m, { conn }) => {
     let teks = `
 ┌──「 Donasi 」
-├ Axel: 593962681710
+├ Kevin:593960841123 
 └───
 `.trim()
     const message = {
@@ -14,7 +14,7 @@ let handler = async(m, { conn }) => {
             {
                 urlButton: {
                     displayText: 'Saweria',
-                    url: 'https://Instagram.com/axelcagua'
+                    url: '`https://instagram.com/kevinsito.593'
                 }
             }, {
                 quickReplyButton: {
